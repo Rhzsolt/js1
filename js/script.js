@@ -1,17 +1,20 @@
-var quantity = 0;
-var qua = 0;
+var quantity = prompt('Add meg a darabszámot');
+var type = prompt('Add meg a típust');
+var types = {
+student: 300,
+adult: 350,
+retired: 280
+}
+/*var price = type === 'student' ? 300 : 350 ;*/
 
-var quantity = prompt('Add meg a darabszámot ha diák vagy');
+var price = types[type];
+/* a price egyenlő lesz a promptból a typének átadott érték kiválasztása a typesből 
+/ez is kezdi az azonos elnevezéseket:)*/
 
-var qua = prompt('Add meg a darabszámot ha felnőtt vagy');
+var discount = quantity > 10 ? 0.9 : 1 ;
+
+var total = quantity * price * discount ;
 
 
-var diak = quantity * 300;
-var k = diak * 0.1;
 
-var feln = qua * 350;
-var n = feln * 0.1;5
-
-var diaki = quantity > 10 ? diak - k : diak;
-var felnki = qua > 10 ? feln - n :feln;
-alert( diaki > 0 ? diaki : felnki);
+alert(total);
