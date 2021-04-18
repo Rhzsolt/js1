@@ -1,153 +1,17 @@
-console.log("Szia");
-console.log(500);
-console.log(["első", "második", "harmadik"][0]);
-console.log([1, 2, 3]);
+var quantity = 0;
+var qua = 0;
+
+var quantity = prompt('Add meg a darabszámot ha diák vagy');
+
+var qua = prompt('Add meg a darabszámot ha felnőtt vagy');
 
 
-console.log({
+var diak = quantity * 300;
+var k = diak * 0.1;
 
-    firstName: 'József',
-    lastName: 'Kovács',
-    age: 50,
-    adress: {
-        street: 'Király u',
-        city: 'Budapest',
-    }
-}.adress.street);
+var feln = qua * 350;
+var n = feln * 0.1;5
 
-
-console.log(
-    [
-        {
-            brand: 'Apple',
-            name: 'iphone',
-            price: 250000,
-            provider: {
-                country: 'Hu',
-                name: 'Vodafone'
-            }
-
-        },
-        {
-            brand: 'Huawei',
-            name: '10',
-            price: 180000,
-            provider: {
-                country: 'De',
-                name: 'T-mobile'
-            }
-
-        },
-        {
-            brand: 'ZTE',
-            name: 'Blade',
-            price: 110000,
-            provider: {
-                country: 'De',
-                name: 'Vodafone'
-            }
-
-        }
-
-    ][0].name
-
-)
-console.log(
-    [
-        {
-            brand: 'Apple',
-            name: 'iphone',
-            price: 250000,
-            provider: {
-                country: 'Hu',
-                name: 'Vodafone'
-            }
-
-        },
-        {
-            brand: 'Huawei',
-            name: '10',
-            price: 180000,
-            provider: {
-                country: 'De',
-                name: 'T-mobile'
-            }
-
-        },
-        {
-            brand: 'ZTE',
-            name: 'Blade',
-            price: 110000,
-            provider: {
-                country: 'De',
-                name: 'Vodafone'
-            }
-
-        }
-
-    ][1].price
-
-)
-console.log(
-    [
-        {
-            brand: 'Apple',
-            name: 'iphone',
-            price: 250000,
-            provider: {
-                country: 'Hu',
-                name: 'Vodafone'
-            }
-
-        },
-        {
-            brand: 'Huawei',
-            name: '10',
-            price: 180000,
-            provider: {
-                country: 'De',
-                name: 'T-mobile'
-            }
-
-        },
-        {
-            brand: 'ZTE',
-            name: 'Blade',
-            price: 110000,
-            provider: {
-                country: 'De',
-                name: 'Vodafone'
-            }
-
-        }
-
-    ][2].provider.country
-
-)
-var valtozo;
-console.log(valtozo);
-
-
-console.log( valtozo = 'Sziau');
-console.log( valtozo);
-valtozo = 3;
-console.log(valtozo);
-valtozo++;
-console.log(valtozo);
-valtozo--;
-console.log(valtozo);
-var szam = 5;
-szam += 10;
-console .log(szam);
-szam -= 20;
-console.log(szam);
-szam += 15;
-console.log(szam);
-
-
-b = szam % 4 ;
-console.log(b);
-
-szam %= 4;
-console.log(szam);
-
+var diaki = quantity > 10 ? diak - k : diak;
+var felnki = qua > 10 ? feln - n :feln;
+alert( diaki > 0 ? diaki : felnki);
