@@ -1,5 +1,7 @@
-let szamsor =[1,5,9,18,26,4];
-let lgn = szamsor[0];
+let szamsor =[1,5,9,18,26,4,31];
+let allitas = false;
 
-for(let i = 0; i< szamsor.length; i++) { if (szamsor[i]>lgn ){ lgn = szamsor[i]}};
-console.log('Legnagyobb:',lgn);
+for (let i = 0; i < szamsor.length && allitas == false; i++) {
+   if ( szamsor[i] == 10){ allitas = true;}}
+   
+console.log(allitas)
