@@ -1,9 +1,10 @@
 
+let user = { name: "Zsolt",
+              age : 53,
+              city : 'Bp'
+            };
 
-
-var szamok = [2, 4, 13, 15, 21, 6];
-
-for (let i = 0; i < szamok.length; i++) {
-    console.log(szamok[i]);
-    
-}
+         for (let k in user) { console.log( 'Key :', k,'    ','Value',user[k]);
+             
+             
+         }   
