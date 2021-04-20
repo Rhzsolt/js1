@@ -1,10 +1,11 @@
 
-let user = { name: "Zsolt",
+
+
+let user ={ name: "Zsolt",
               age : 53,
               city : 'Bp'
             };
 
-         for (let k in user) { console.log( 'Key :', k,'    ','Value',user[k]);
-             
-             
-         }   
+       
+
+for ( let entry of Object.entries( user)) {console.log( entry[0]  ,entry[1])};
