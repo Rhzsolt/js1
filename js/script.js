@@ -1,11 +1,8 @@
+var szam = [1,56,65,87,61,72,86];
 
+var prs = 0;
 
-
-let user ={ name: "Zsolt",
-              age : 53,
-              city : 'Bp'
-            };
-
-       
-
-for ( let entry of Object.entries( user)) {console.log( entry[0]  ,entry[1])};
+for (let i = 0; i < szam.length ; i++) {
+   if ( szam[i] % 2 == 0 ){ prs++;}
+    } 
+    console.log('Páros:',prs);
