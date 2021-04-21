@@ -1,11 +1,11 @@
 var age = prompt('Add meg az életkorod4');
 
-switch (age) {
-   case '18':
+switch (true) {
+   case age <= 20:
       { alert('Fiatal') }
       break;
 
-   case '20':
+   case age >20 && age < 30:
       { alert('Középkorú') }
       break;
    default: { alert('Öreg') }
