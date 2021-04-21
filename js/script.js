@@ -1,13 +1,22 @@
-var age = prompt('Add meg az életkorod!');
+var hetNapjai = new Date().getDay();
 
-switch (true) {
-   case age <= 20:
-      { alert('Fiatal') }
+switch (hetNapjai) {
+
+   case 0: alert('Vasárnap');
       break;
 
-   case age >20 && age < 60:
-      { alert('Középkorú') }
+   case 1: alert('Hétfő');
       break;
-   default: { alert('Öreg') }
+
+   case 2: alert('Kedd');
+      break;
+
+   case 3:  alert('Szerda') 
+      break;
+
+   case 4: alert('Csütörtök') ;
+      break;
+
+   default: { alert('Nem túl jó !!') }
 }
 
