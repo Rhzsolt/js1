@@ -1,7 +1,7 @@
-let szamsor =[1,5,9,18,26,4,31];
-let allitas = false;
+var age = prompt('Add meg az életkorod4');
 
-for (let i = 0; i < szamsor.length && allitas == false; i++) {
-   if ( szamsor[i] == 10){ allitas = true;}}
-   
-console.log(allitas)
+if (age< 20) {  alert('Fiatal')  }
+
+else if ( age >=20 && age <= 40) {alert ('Középkorú')}
+
+else {   alert('Öreg')};
