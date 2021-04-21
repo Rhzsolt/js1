@@ -1,7 +1,13 @@
 var age = prompt('Add meg az életkorod4');
 
-if (age< 20) {  alert('Fiatal')  }
+switch (age) {
+   case '18':
+      { alert('Fiatal') }
+      break;
 
-else if ( age >=20 && age <= 40) {alert ('Középkorú')}
+   case '20':
+      { alert('Középkorú') }
+      break;
+   default: { alert('Öreg') }
+}
 
-else {   alert('Öreg')};
