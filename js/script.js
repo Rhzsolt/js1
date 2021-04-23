@@ -5,34 +5,6 @@ le róla azt.
 */
 
 /*
-  - element JS reprezentációja: document.getElementById('element-one')
-  - esemény kiválasztása: onclick
-  - funkcionalitás leírása: function () {...}
-*/
-
-// belső állapot: state
-var isBlurred = false;
-
-// action (esemény)
-document.getElementById("element-one").onclick = function() {
-  // state change
-  isBlurred = !isBlurred;
-
-  // render
-  if (isBlurred) {
-    document.getElementById("element-one").classList.add("blur");
-  } else {
-    document.getElementById("element-one").classList.remove("blur");
-  }
-};
-
-/*
-1. doboz:
-Kattintásra adjunk hozzá egy "blur" nevű class attribútumot, majd újabb kattintásra vegyük
-le róla azt.
-*/
-
-/*
 2. doboz:
 Ha az egérrel fölé megyünk változzon meg a háttérszíne pirosra, ha levesszük róla az egeret
 változzon vissza az eredeti színére.
@@ -91,3 +63,4 @@ Pl:
   
   Dobozba és state-be beírandó érték: 45
 */
+
