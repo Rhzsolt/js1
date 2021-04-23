@@ -1,18 +1,5 @@
 
-
-function füszerek()
-
- {
-    alert('só ')
-   alert('bors')}
-
-
-function rantottaSütés() 
-{ 
-   alert('tojás kell')
-   
-   alert('olajat rá')
-   alert('meg a többi');
+function megAdo(szam) {
+  return szam + 1;
 };
-
- rantottaSütés() ;füszerek();
+alert(megAdo(5));
