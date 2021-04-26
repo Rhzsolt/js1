@@ -10,7 +10,6 @@ le róla azt.
 Belső állapot-/state/--
 */
 var isBlured = false;
-var Sanyi = true;
 // action (esemény)
 document.getElementById('element-one').onclick = function () 
 { // state change-- esemény hatására belső állapot változás
@@ -27,6 +26,23 @@ document.getElementById('element-one').onclick = function ()
 Ha az egérrel fölé megyünk változzon meg a háttérszíne pirosra, ha levesszük róla az egeret
 változzon vissza az eredeti színére.
 */
+var isHoveredOver = false;
+
+document.getElementById('element-two').onmouseover = function () 
+{ isHoveredOver = true;
+  renderSecondBox();}
+
+document.getElementById('element-two').onmouseout = function () 
+{ isHoveredOver = false;
+  renderSecondBox();}
+
+function renderSecondBox() {
+ 
+  if (isHoveredOver) {document.getElementById('element-two').style.backgroundColor = 'red';}
+  else {
+    document.getElementById('element-two').style.backgroundColor = '';}
+  }
+
 
 /*
 3. doboz:
@@ -82,3 +98,4 @@ Pl:
   Dobozba és state-be beírandó érték: 45
 */
 
+console.log(document.all)
