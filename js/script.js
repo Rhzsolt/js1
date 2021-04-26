@@ -2,8 +2,26 @@
 1. doboz:
 Kattintásra adjunk hozzá egy "blur" nevű class attribútumot, majd újabb kattintásra vegyük
 le róla azt.
+                                                         id neve
+-- element JS reprezentációja ---document.getElementById('element-one')
+--esemény kiválasztása--onclick
+--funkcionalitás leírása-- function () {.. elővenni a már kiválasztott eleme ID vel 
+                            és clssList.add al beírni a blurt.}
+Belső állapot-/state/--
 */
-
+var isBlured = false;
+var Sanyi = true;
+// action (esemény)
+document.getElementById('element-one').onclick = function () 
+{ // state change-- esemény hatására belső állapot változás
+  isBlured = !isBlured
+ 
+// render
+  if (isBlured)
+  document.getElementById('element-one').classList.add("blur");
+ else
+ {document.getElementById('element-one').classList.remove("blur");}
+};
 /*
 2. doboz:
 Ha az egérrel fölé megyünk változzon meg a háttérszíne pirosra, ha levesszük róla az egeret
