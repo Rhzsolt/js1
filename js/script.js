@@ -69,6 +69,18 @@ document.getElementById('element-three').ondblclick = function() {
 Kattintásra tűnjön el, majd egy 1 másodperces várakozás után ismét jelenjen meg.
 */
 
+document.getElementById('element-four').onclick = function(){
+  document.getElementById('element-four').classList.add ('hidden');
+
+setTimeout(function () {document.getElementById('element-four').classList.remove ('hidden') },2000);
+
+}
+
+
+
+
+
+
 /*
 5. doboz:
 Kattintásra alakítsa kör alakúra az összes dobozt.
