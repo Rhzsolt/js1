@@ -11,15 +11,12 @@ Belső állapot-/state/--
 */
 var isBlured = false;
 // action (esemény)
-document.getElementById('element-one').onclick = function () 
-{ // state change-- esemény hatására belső állapot változás
+document.getElementById('element-one').onclick = function () { // state change-- esemény hatására belső állapot változás
   isBlured = !isBlured
- 
-// render
-  if (isBlured)
-  {document.getElementById('element-one').classList.add("blur");}
- else
- {document.getElementById('element-one').classList.remove("blur");}
+
+  // render
+  if (isBlured) { document.getElementById('element-one').classList.add("blur"); }
+  else { document.getElementById('element-one').classList.remove("blur"); }
 };
 /*
 2. doboz:
@@ -28,20 +25,23 @@ változzon vissza az eredeti színére.
 */
 var isHoveredOver = false;
 
-document.getElementById('element-two').onmouseover = function () 
-{ isHoveredOver = true;
-  renderSecondBox();}
+document.getElementById('element-two').onmouseover = function () {
+  isHoveredOver = true;
+  renderSecondBox();
+}
 
-document.getElementById('element-two').onmouseout = function () 
-{ isHoveredOver = false;
-  renderSecondBox();}
+document.getElementById('element-two').onmouseout = function () {
+  isHoveredOver = false;
+  renderSecondBox();
+}
 
 function renderSecondBox() {
- 
-  if (isHoveredOver) {document.getElementById('element-two').style.backgroundColor = 'red';}
+
+  if (isHoveredOver) { document.getElementById('element-two').style.backgroundColor = 'red'; }
   else {
-    document.getElementById('element-two').style.backgroundColor = '';}
+    document.getElementById('element-two').style.backgroundColor = '';
   }
+}
 
 
 /*
@@ -52,8 +52,8 @@ Dupla kattintással sorsoljon egy számot 1 és 20 között és módosítsa a ka
 function getRandomArbitrary(min, max) {
   return Math.floor(Math.random() * (max - min) + min);
 }
-document.getElementById('element-three').ondblclick = function() {
-  document.getElementById('element-three').firstElementChild.innerHTML = getRandomArbitrary(1,20)
+document.getElementById('element-three').ondblclick = function () {
+  document.getElementById('element-three').firstElementChild.innerHTML = getRandomArbitrary(1, 20)
 }
 
 
@@ -69,10 +69,10 @@ document.getElementById('element-three').ondblclick = function() {
 Kattintásra tűnjön el, majd egy 1 másodperces várakozás után ismét jelenjen meg.
 */
 
-document.getElementById('element-four').onclick = function(){
-  document.getElementById('element-four').classList.add ('hidden');
+document.getElementById('element-four').onclick = function () {
+  document.getElementById('element-four').classList.add('hidden');
 
-setTimeout(function () {document.getElementById('element-four').classList.remove ('hidden') },2000);
+  setTimeout(function () { document.getElementById('element-four').classList.remove('hidden') }, 2000);
 
 }
 
@@ -85,8 +85,18 @@ setTimeout(function () {document.getElementById('element-four').classList.remove
 5. doboz:
 Kattintásra alakítsa kör alakúra az összes dobozt.
 */
-
-
+/* Kiválasztom a megadott classot és utána gyarekeit
+console.log(document.querySelector('.container').children)
+                              VAGY 
+ki lehet választani azonnal az összes gyereket az ALL lal(ha van id vagy class és ua az a neve)
+console.log(document.querySelectorAll('.shape'));*/
+document.getElementById('element-five').onclick = function () {
+  var dobozok = document.querySelectorAll('.shape');
+for (var i of dobozok) {
+    i.style.borderRadius = '50%'}
+setTimeout(function(){for (var i of dobozok) {
+    i.style.borderRadius = ''}},2000)
+}
 /*
 6. doboz:
 Form submit eseményre módosítsuk a doboz tartalmát az input mezőbe írt értékkel
