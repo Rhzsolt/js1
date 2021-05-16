@@ -101,6 +101,11 @@ setTimeout(function(){for (var i of dobozok) {
 6. doboz:
 Form submit eseményre módosítsuk a doboz tartalmát az input mezőbe írt értékkel
 */
+document.getElementById('box-6').onsubmit = function(event){
+  event.preventDefault();
+  document.getElementById('element-six').firstElementChild.innerHTML = event.target.elements.boxNumber.value;
+
+}
 
 
 /*
