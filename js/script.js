@@ -112,7 +112,10 @@ document.getElementById('box-6').onsubmit = function(event){
 7. doboz:
 Keypress eseményre írjuk be a dobozba az adott karaktert, amit leütöttek
 */
-
+document.getElementById('box7-input').onkeypress = function (event){
+  document.getElementById("element-seven").firstElementChild.innerHTML = event.key;
+ 
+}
 
 /*
 8. doboz:
