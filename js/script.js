@@ -125,8 +125,8 @@ a következő séma szerint: "X: {x-koordináta}, Y: {y-koordináta}"
 */
 
 document.onmousemove = function(event){
-
-  document.getElementById('element-eight').firstElementChild.innerHTML = 'X :' + event.clientX + '  Y :'+ event.clientY
+var coordinate = 'X :' + event.clientX + '  Y :'+ event.clientY
+  document.getElementById('element-eight').firstElementChild.innerHTML = coordinate;
 
 }
 /*
