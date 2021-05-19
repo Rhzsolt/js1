@@ -111,10 +111,11 @@ document.getElementById('box-6').onsubmit = function(event){
 /*
 7. doboz:
 Keypress eseményre írjuk be a dobozba az adott karaktert, amit leütöttek
+event lehet target is
 */
 document.getElementById('box7-input').onkeypress = function (event){
   document.getElementById("element-seven").firstElementChild.innerHTML = event.key;
- 
+
 }
 
 /*
@@ -123,7 +124,11 @@ Egérmozdítás eseményre írjuk be az egér pozíciójának x és y koordinát
 a következő séma szerint: "X: {x-koordináta}, Y: {y-koordináta}"
 */
 
+document.onmousemove = function(event){
 
+  document.getElementById('element-eight').firstElementChild.innerHTML = 'X :' + event.clientX + '  Y :'+ event.clientY
+
+}
 /*
 9. doboz:
 Submit eseményre módosítsuk a doboz tartalmát azzal az értékkel ami úgy áll elő, 
