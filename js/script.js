@@ -92,16 +92,20 @@ ki lehet választani azonnal az összes gyereket az ALL lal(ha van id vagy class
 console.log(document.querySelectorAll('.shape'));*/
 document.getElementById('element-five').onclick = function () {
   var dobozok = document.querySelectorAll('.shape');
-for (var i of dobozok) {
-    i.style.borderRadius = '50%'}
-setTimeout(function(){for (var i of dobozok) {
-    i.style.borderRadius = ''}},2000)
+  for (var i of dobozok) {
+    i.style.borderRadius = '50%'
+  }
+  setTimeout(function () {
+    for (var i of dobozok) {
+      i.style.borderRadius = ''
+    }
+  }, 2000)
 }
 /*
 6. doboz:
 Form submit eseményre módosítsuk a doboz tartalmát az input mezőbe írt értékkel
 */
-document.getElementById('box-6').onsubmit = function(event){
+document.getElementById('box-6').onsubmit = function (event) {
   event.preventDefault();
   document.getElementById('element-six').firstElementChild.innerHTML = event.target.elements.boxNumber.value;
 
@@ -113,7 +117,7 @@ document.getElementById('box-6').onsubmit = function(event){
 Keypress eseményre írjuk be a dobozba az adott karaktert, amit leütöttek
 event lehet target is
 */
-document.getElementById('box7-input').onkeypress = function (event){
+document.getElementById('box7-input').onkeypress = function (event) {
   document.getElementById("element-seven").firstElementChild.innerHTML = event.key;
 
 }
@@ -124,8 +128,8 @@ Egérmozdítás eseményre írjuk be az egér pozíciójának x és y koordinát
 a következő séma szerint: "X: {x-koordináta}, Y: {y-koordináta}"
 */
 
-document.onmousemove = function(event){
-var coordinate = 'X :' + event.clientX + '  Y :'+ event.clientY
+document.onmousemove = function (event) {
+  var coordinate = 'X :' + event.clientX + '  Y :' + event.clientY
   document.getElementById('element-eight').firstElementChild.innerHTML = coordinate;
 
 }
@@ -146,5 +150,34 @@ Pl:
   
   Dobozba és state-be beírandó érték: 45
 */
+var state = 9;
 
-console.log(document.all)
+document.getElementById('box-9').onsubmit = function (event) {
+  event.preventDefault();
+  var operand = Number( event.target.elements.operand.value);
+
+  console.log(operand)
+
+
+  var operator = event.target.elements.operator.value;
+
+  switch (operator) {
+    case 'mult':
+      state = state * operand;
+      break;
+    case 'div':
+      state = state / operand;
+      break;
+    case 'add':
+      state = state + operand;
+      break;
+    case 'sub':
+      state = state - operand;
+      break;
+
+  }
+  document.getElementById('element-nine').firstElementChild.innerHTML = state;
+
+
+
+}
